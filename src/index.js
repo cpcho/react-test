@@ -26,14 +26,14 @@ class Board extends React.Component {
     }
     squares[i] = this.state.xIsNext ? 'X' : 'O';
     this.setState({
-      sqaures: squares,
+      squares: squares,
       xIsNext: !this.state.xIsNext,
     });
   }
 
   renderSquare(i) {
     return (
-      <Square 
+      <Square
         value={this.state.squares[i]}
         onClick={() => this.handleClick(i)}
       />
